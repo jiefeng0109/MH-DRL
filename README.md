@@ -3,11 +3,26 @@
     Jie Feng *, Qiyang Gao , Ronghua Shang , Xianghai Cao , Gaiqin Bai , Xiangrong Zhang , Licheng Jiao
 
 - [论文地址](https://www.sciencedirect.com/science/article/pii/S0950705124006786)
-## A B S T R A C T
-由于高光谱图像(HSIs)中存在噪声和高度冗余的波段，波段选择是下游分类任务的关键预处理。最近，深度强化学习 (DRL) 已成为 HSI 波段选择的新趋势。现有的基于drl的方法通常采用单智能体，由于动作空间过多，容易陷入局部最优。多智能体方法提供了一种可行的解决方案，但通常需要太多的计算。为了解决这些问题，提出了一种新的混合教师引导(MH-DRL)多智能体DRL方法，用于HSIS的波段选择。在MH-DRL中，对应于光谱波段的每个代理决定是否选择该波段。此外，构建了一个表示评估网络（PE-Net），通过在没有任何微调的情况下评估候选波段子集来设计奖励，并通过提取 HSI 的空间光谱特征来表示状态。然后，将三种经验丰富的波段选择模型作为教师，设计参与DRL波段探索，通过积累来自不同教师模型的外部知识来提高学习的有效性和效率。最后，设计了深度Q学习算法来更新智能体，并从连续探索中提高自学习能力。在三个广泛使用的HSI数据上的实验结果表明，该方法的性能优于一些先进的HSI波段选择算法。
+- [GitHub主页](https://github.com/jiefeng0109)
+- [Jie Feng主页](https://github.com/jiefeng0109](https://web.xidian.edu.cn/fengjie/))
 
-## 提出的MH-DRL方法的框架。红色波段表示所选波段，灰色波段表示未选择波段。
+# Introduction
+## A B S T R A C T
+Due to the presence of noisy and highly redundant bands in hyperspectral images (HSIs), band selection serves as a key preprocessing for downstream classification tasks. Recently, deep reinforcement learning (DRL) has been developed as a new trend for band selection of HSIs. Existing DRL-based methods often adopt single-agent, which are prone to fall into local optima due to an excessive action space. The multi-agent methods provide a feasible solution, but often require too much computation. To address these problems, a novel multi-agent DRL method with hybrid teacher guide (MH-DRL) is proposed for band selection of HSIs. In MH-DRL, each agent corre-sponding to a spectral band decides whether this band is selected. Moreover, a presentation-evaluation network (PE-Net) is constructed to design the reward by evaluating the candidate band subsets without any fine-tuning and represent the state by extracting the spatial-spectral features of HSIs. Then, three kinds of experienced band selection models are regarded as the teachers and designed to participate in the band exploration of DRL, which can improve the learning effectiveness and efficiency by accumulating the external knowledge from diverse teacher models. Finally, deep Q-learning algorithm is designed to update the agents and improve their selflearning ability from continuous exploration. Experimental results on three widely-used HSI data verify the performance of the proposed method better than some advanced band selection algorithms of HSIs.
+
+## Fig. 1. The framework of the proposed MH-DRL method. The red bands mean the selected bands while the grey one denotes the unselect band.
 ![image](https://github.com/jiefeng0109/MH-DRL/assets/26159369/c97aaa5f-deac-4e49-a801-8d5a8ca2ff1c)
 
-## 设计的深度 Q 网络的框架。
+## Fig. 3. The framework of designed deep Q-network.
 ![image](https://github.com/jiefeng0109/MH-DRL/assets/26159369/a7d7812e-7630-4dd1-8280-c095cfd2fd7f)
+
+For further details, please check out our [paper](https://www.sciencedirect.com/science/article/pii/S0950705124006786). 
+
+# Code Review
+## Pretrain
+    
+## train
+
+## test
+
+## results
