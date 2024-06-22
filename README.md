@@ -18,11 +18,28 @@ Due to the presence of noisy and highly redundant bands in hyperspectral images 
 
 For further details, please check out our [paper](https://www.sciencedirect.com/science/article/pii/S0950705124006786). 
 
-# Code Review
-## Pretrain
-    
-## train
 
-## test
 
-## results
+# Code
+
+## Code Structure
+- 3DCNN
+- AFS
+  - ActionTeacher.py 可替换教师（advisor）
+  - Evaluate_Net.py (训练进化网络)
+
+  - main.py 
+- AutoFs
+- band_map
+- Classification_network
+  - Evaluate_Net.py (训练进化网络)
+  - main.py 
+- Constrast_algorithm
+## script
+     #训练评价网络
+     run Classification_network\3DCNN\Evaluate_Net.py
+     run AFS\Evaluate_Net.py
+     #训练主干网络
+     run Classification_network\3DCNN\main.py
+     run AFS\main.py
+
