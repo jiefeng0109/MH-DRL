@@ -18,28 +18,80 @@ Due to the presence of noisy and highly redundant bands in hyperspectral images 
 
 For further details, please check out our [paper](https://www.sciencedirect.com/science/article/pii/S0950705124006786). 
 
+# High-Spectral Image Datasets
+
+This repository provides access to three popular high-spectral image datasets used for remote sensing and classification tasks: Indian Pines, Pavia University, and Houston.
+
+## Indian Pines
+
+The Indian Pines dataset consists of hyperspectral data gathered by the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) sensor over the Indian Pines test site in North-western Indiana. The dataset contains 145x145 pixels and 220 spectral reflectance bands in the wavelength range 0.4–2.5 µm. There are 16 classes in the ground truth, which range from different types of crops to forests.
+
+- **Download Address:** [Indian Pines Dataset](http://www.ehu.eus/ccwintco/uploads/6/67/Indian_pines_corrected.mat)
+- **Ground Truth:** [Indian Pines Ground Truth](http://www.ehu.eus/ccwintco/uploads/c/c4/Indian_pines_gt.mat)
+
+## Pavia University
+
+The Pavia University dataset was collected by the Reflective Optics System Imaging Spectrometer (ROSIS) sensor over the University of Pavia, Italy. The dataset consists of 610x340 pixels and 103 spectral bands ranging from 0.43 to 0.86 µm. It includes nine classes, such as asphalt, meadows, and trees.
+
+- **Download Address:** [Pavia University Dataset](http://www.ehu.eus/ccwintco/uploads/e/ee/PaviaU.mat)
+- **Ground Truth:** [Pavia University Ground Truth](http://www.ehu.eus/ccwintco/uploads/5/50/PaviaU_gt.mat)
+
+## Houston
+
+The Houston dataset is part of the IEEE GRSS Data Fusion Contest and was collected by the Compact Airborne Spectrographic Imager (CASI) sensor over the University of Houston campus and its neighboring urban area. It contains 349x1905 pixels and 144 spectral bands in the wavelength range 0.38–1.05 µm. The dataset has 15 classes, including grass, trees, and several urban materials.
+
+- **Download Address:** [Houston Dataset](http://hyperspectral.ee.uh.edu/?page_id=1076)
+- **Ground Truth:** [Houston Ground Truth](http://hyperspectral.ee.uh.edu/?page_id=1076)
+
+## Usage
+
+To use these datasets, download the files from the provided links and load them into your hyperspectral image processing pipeline. Make sure to refer to the respective papers and sources for any specific preprocessing steps required.
+
+## References
+
+- Indian Pines: AVIRIS
+- Pavia University: ROSIS
+- Houston: CASI, IEEE GRSS Data Fusion Contest
 
 
-# Code
+# Code Structure and Execution Guide
+
+This repository contains various scripts and modules for training and evaluating neural networks, including 3D CNNs and adaptive feature selection (AFS) techniques.
 
 ## Code Structure
-- 3DCNN
-- AFS
-  - ActionTeacher.py 可替换教师（advisor）
-  - Evaluate_Net.py (训练进化网络)
 
-  - main.py 
-- AutoFs
-- band_map
-- Classification_network
-  - Evaluate_Net.py (训练进化网络)
-  - main.py 
-- Constrast_algorithm
-## script
-     #训练评价网络
-     run Classification_network\3DCNN\Evaluate_Net.py
-     run AFS\Evaluate_Net.py
-     #训练主干网络
-     run Classification_network\3DCNN\main.py
-     run AFS\main.py
+### 3DCNN
+- Implementation and training of 3D Convolutional Neural Networks.
+
+### AFS (Adaptive Feature Selection)
+- **ActionTeacher.py**: Script for substitutable teacher (advisor) in AFS.
+- **Evaluate_Net.py**: Script for training and evolving the network.
+- **main.py**: Main script for AFS network training.
+
+### AutoFs
+- Implementation of automatic feature selection algorithms.
+
+### band_map
+- Scripts related to band mapping for hyperspectral images.
+
+### Classification_network
+- **Evaluate_Net.py**: Script for training and evolving the classification network.
+- **main.py**: Main script for training the classification network.
+
+### Constrast_algorithm
+- Scripts for contrast enhancement algorithms.
+
+## Script Execution
+
+To train and evaluate the networks, follow the instructions below:
+
+### Training Evaluation Network
+
+```bash
+# Train evaluation network for 3DCNN
+run Classification_network/3DCNN/Evaluate_Net.py
+
+# Train evaluation network for AFS
+run AFS/Evaluate_Net.py
+
 
