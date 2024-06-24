@@ -24,21 +24,15 @@ This repository provides access to three popular high-spectral image datasets us
 
 ## Indian Pines
 
-The Indian Pines dataset consists of hyperspectral data gathered by the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) sensor over the Indian Pines test site in North-western Indiana. The dataset contains 145x145 pixels and 220 spectral reflectance bands in the wavelength range 0.4–2.5 µm. There are 16 classes in the ground truth, which range from different types of crops to forests.
-
 - **Download Address:** [Indian Pines Dataset](http://www.ehu.eus/ccwintco/uploads/6/67/Indian_pines_corrected.mat)
 - **Ground Truth:** [Indian Pines Ground Truth](http://www.ehu.eus/ccwintco/uploads/c/c4/Indian_pines_gt.mat)
 
 ## Pavia University
 
-The Pavia University dataset was collected by the Reflective Optics System Imaging Spectrometer (ROSIS) sensor over the University of Pavia, Italy. The dataset consists of 610x340 pixels and 103 spectral bands ranging from 0.43 to 0.86 µm. It includes nine classes, such as asphalt, meadows, and trees.
-
 - **Download Address:** [Pavia University Dataset](http://www.ehu.eus/ccwintco/uploads/e/ee/PaviaU.mat)
 - **Ground Truth:** [Pavia University Ground Truth](http://www.ehu.eus/ccwintco/uploads/5/50/PaviaU_gt.mat)
 
 ## Houston
-
-The Houston dataset is part of the IEEE GRSS Data Fusion Contest and was collected by the Compact Airborne Spectrographic Imager (CASI) sensor over the University of Houston campus and its neighboring urban area. It contains 349x1905 pixels and 144 spectral bands in the wavelength range 0.38–1.05 µm. The dataset has 15 classes, including grass, trees, and several urban materials.
 
 - **Download Address:** [Houston Dataset](http://hyperspectral.ee.uh.edu/?page_id=1076)
 - **Ground Truth:** [Houston Ground Truth](http://hyperspectral.ee.uh.edu/?page_id=1076)
@@ -46,13 +40,6 @@ The Houston dataset is part of the IEEE GRSS Data Fusion Contest and was collect
 ## Usage
 
 To use these datasets, download the files from the provided links and load them into your hyperspectral image processing pipeline. Make sure to refer to the respective papers and sources for any specific preprocessing steps required.
-
-## References
-
-- Indian Pines: AVIRIS
-- Pavia University: ROSIS
-- Houston: CASI, IEEE GRSS Data Fusion Contest
-
 
 # Code Structure and Execution Guide
 
