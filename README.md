@@ -18,7 +18,7 @@ Due to the presence of noisy and highly redundant bands in hyperspectral images 
 
 For further details, please check out our [paper](https://www.sciencedirect.com/science/article/pii/S0950705124006786). 
 
-# High-Spectral Image Datasets
+# Datasets
 
 This repository provides access to three popular high-spectral image datasets used for remote sensing and classification tasks: Indian Pines, Pavia University, and Houston.
 
